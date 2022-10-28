@@ -2,7 +2,7 @@ An open-source project to verify the legitimacy of an issued credit card using t
 
 # Overview
 
-Generally, credit cards contain a 16-digit unique number issued to the holder. The numbers are assigned according to the following rules:
+Generally, credit cards contain a 16-digit unique number that identifies the cardholder. The numbers are assigned according to the following rules:
 
 1. Starting from the leftmost digit, every alternate digit is multiplied by 2.
 
