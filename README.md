@@ -10,7 +10,7 @@ Generally, credit cards contain a 16-digit unique number that identifies the car
 
 1. After the operations, all the digits (alternate as well as the remaining digits) are added.
 
-1. The card number is valid if the final sum is divisible by 10. All the steps above verify the validity of the card.
+1. The card number is valid if the final sum is divisible by 10. All the steps above thus verify the validity of the card.
 
 <br>
 
