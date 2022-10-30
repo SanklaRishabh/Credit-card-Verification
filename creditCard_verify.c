@@ -29,6 +29,7 @@ bool verifyCard(char *string) {
 
 bool verifyCard2(char *cardNumber) {
   // assuming that cardNumber lenth is always 16
+  // uses less memory than the original function
   int sum = 0;
   for (short i = 0; i < 16; i++) {
     int num = cardNumber[i] - '0';
