@@ -1,7 +1,8 @@
 #include <stdbool.h>
 #include <stdio.h>
+#define OPTIMIZED
 
-bool verifyCard(char *string) {
+bool verifyCard_original(char *string) {
   short cardNum[16], alternateDigits[8], sum = 0;
 
   for (short i = 0; i < 16; i++) {
@@ -27,7 +28,7 @@ bool verifyCard(char *string) {
   }
 }
 
-bool verifyCard2(char *cardNumber) {
+bool verifyCard_optimized(char *cardNumber) {
   // assuming that cardNumber lenth is always 16
   // uses less memory than the original function
   int sum = 0;
@@ -51,11 +52,20 @@ int main() {
 
   printf("Enter a credit card number: ");
   scanf("%s", cardNumber);
-
-  if (verifyCard2(cardNumber)) {
+  
+  #ifdef OPTIMIZED
+  if (verifyCard_optimized(cardNumber)) {
     printf("The card is valid.");
   } else {
     printf("You entered an invalid card number.");
   }
+  #else
+  if (verifyCard_original(cardNumber)) {
+    printf("The card is valid.");
+  } else {
+    printf("You entered an invalid card number.");
+  }
+  #endif
+  
   return 0;
 }
