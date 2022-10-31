@@ -56,16 +56,15 @@ int main() {
   #ifdef OPTIMIZED
   if (verifyCard_optimized(cardNumber)) {
     printf("The card is valid.");
-  } else {
-    printf("You entered an invalid card number.");
   }
   #else
   if (verifyCard_original(cardNumber)) {
     printf("The card is valid.");
-  } else {
-    printf("You entered an invalid card number.");
   }
   #endif
+  else {
+    printf("You entered an invalid card number.");
+  }
   
   return 0;
 }
